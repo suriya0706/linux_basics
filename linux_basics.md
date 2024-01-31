@@ -1,6 +1,4 @@
-***
 # Linux Basics
-***
 
 ## Top regular use commands in Linux
 

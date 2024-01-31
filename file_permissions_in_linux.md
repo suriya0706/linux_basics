@@ -65,17 +65,59 @@
       root@ubuntu:~# chmod permissions filename 
     ```
 - Absolute(Numeric) mode: In this mode, file permissions are not represented as characters but a three-digit octal number. The table below gives numbers for all for permissions types.
-  >    | Number    | Permission Type        | Symbol  |
-  >    | --------  | ---------------------- | ------- |
-  >    | 0         | No Permision           | ---     |
-  >    | 1         | Execute                | --x     |
-  >    | 2         | Write                  | -w-     |
-  >    | 3         | Execute + Write        | -wx     |
-  >    | 4         | Read                   | r--     |
-  >    | 5         | Read + Execute         | r-x     |
-  >    | 6         | Read + Write           | rw-     |
-  >    | 7         | Read + Write + Execute | rwx     |
-	
+  - >    | Number    | Permission Type        | Symbol  |
+    >    | --------  | ---------------------- | ------- |
+    >    | 0         | No Permision           | ---     |
+    >    | 1         | Execute                | --x     |
+    >    | 2         | Write                  | -w-     |
+    >    | 3         | Execute + Write        | -wx     |
+    >    | 4         | Read                   | r--     |
+    >    | 5         | Read + Execute         | r-x     |
+    >    | 6         | Read + Write           | rw-     |
+    >    | 7         | Read + Write + Execute | rwx     |
+  - Example:
+    ```bash
+      root@ubuntu:~# chmod 764 sample.pdf
+    ```
+- Symbolic mode: In this mode, you can modify permissions of a specific owner. It makes use of mathematical symbols to modify the Unix file permissions.
+  - >    | Operator  | Description                                                   |
+    >    | --------  | ------------------------------------------------------------- |
+    >    | +         | Adds a permision to a file or directory                       |
+    >    | -         | Removes the permission                                        |
+    >    | =         | Sets the permission and overrides the permissions set earlier |
+  - The various owners are represented as:
+  - >    | User Denotions  | Description    |
+    >    | --------  | -------------------- |
+    >    | u         | user/owner           |
+    >    | g         | group                |
+    >    | o         | all                  |
+  - Example:
+    ```bash
+      root@ubuntu:~# chmod g+x
+    ```
+
+***
+
+## Changing Ownership and Group in Linux
+
+- For changing the ownership of a file/directory, you can use the following command:
+  ```bash
+    # changing the file owner to abc
+    root@ubuntu:~# sudo chown user sample.txt
+  ```  
+- In case you want to change the user as well as group for a file or directory use the following command:
+  ```bash
+    # changing the user and group to root 
+    root@ubuntu:~# sudo chown user:group sample.txt
+  ```  
+- Incase you want to change the group-owner, you can use the following command:
+  ```bash
+    root@ubuntu:~# sudo chgrp root sample.text
+  ```
+***
+
+
+
 
 
 

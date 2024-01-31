@@ -1,0 +1,1 @@
+This is the new file created in the newly created branch (new_branch).

@@ -9,6 +9,7 @@
   - Ownership
   - Permissions
 
+***
 
 ## Ownership in Linux files
 
@@ -20,6 +21,7 @@
   - Others:
     > Any other user who has access to a file. This person has neither created the file, nor he belongs to a usergroup who could own the file. Practically, it means everybody else. Hence, when you set the permission for others, it is also referred as set permissions for the world.
 
+***
 
 ## Permissions in Linux files
 
@@ -32,6 +34,7 @@
   - Execute (x):
     > In Unix/Linux, you cannot run a program unless the execute permission is set. If the execute permission is not set, you might still be able to see/modify the program code(provided read & write permissions are set), but not run it.
 
+***
 
 ## 	Syntax explanation of file permissions in Linux
 
@@ -51,7 +54,7 @@
     > The following set of three characters "rw-" tells us that the group members have read, write access but not execute access.  
     > The following set of three characters "r--" tells us that any other user can only read the contents of the file.
 
-
+***
 
 ## Changing file/directory permissions in Linux using "chmod"
 
@@ -62,13 +65,16 @@
       root@ubuntu:~# chmod permissions filename 
     ```
 - Absolute(Numeric) mode: In this mode, file permissions are not represented as characters but a three-digit octal number. The table below gives numbers for all for permissions types.
->    | Number    | Permission Type   | Symbol  |
->    | --------  | ----------------- | ------- |
->    | 0         | No Permision      | ---     |
->    | 1         | Execute           | --x     |
->    | 2         | Write             | -w-     |
->    | 2         | Write             | -w-     |
->    | 2         | Write             | -w-     |
+  >    | Number    | Permission Type        | Symbol  |
+  >    | --------  | ---------------------- | ------- |
+  >    | 0         | No Permision           | ---     |
+  >    | 1         | Execute                | --x     |
+  >    | 2         | Write                  | -w-     |
+  >    | 3         | Execute + Write        | -wx     |
+  >    | 4         | Read                   | r--     |
+  >    | 5         | Read + Execute         | r-x     |
+  >    | 6         | Read + Write           | rw-     |
+  >    | 7         | Read + Write + Execute | rwx     |
 	
 
 
